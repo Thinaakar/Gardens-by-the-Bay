@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Script from "next/script";
 import { Lato } from "next/font/google";
 import Header from "@/components/layout/Header";
 import VisitStrip from "@/components/layout/VisitStrip";
 import Footer from "@/components/layout/Footer";
+import MonGPTWidget from "@/components/shared/MonGPTWidget";
 import "./globals.css";
 
 /** Live site primary typeface: Lato, Arial, sans-serif */
@@ -32,13 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main className="flex-1">{children}</main>
         <VisitStrip />
         <Footer />
-        <Script
-          src="https://cdn.dev-mongpt.com/mongpt-widget.iife.js"
-          strategy="afterInteractive"
-        />
-        <Script id="mongpt-init" strategy="afterInteractive">
-          {`MonGPT.init({ tenantId: 'df0b76c2-5800-4881-9193-02f83c6050d7', chatbotId: '51f6eeec-c17a-4ad5-965f-3f83cbf3c486' });`}
-        </Script>
+        <MonGPTWidget />
       </body>
     </html>
   );

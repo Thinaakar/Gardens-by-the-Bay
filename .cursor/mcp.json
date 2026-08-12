@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "mongpt": {
+      "url": "https://api.dev-mongpt.com/mcp"
+    }
+  }
+}
