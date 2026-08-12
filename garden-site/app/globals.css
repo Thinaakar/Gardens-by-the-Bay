@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --garden-canopy: #1f3a36;
+  --garden-leaf: #00a19a;
+  --garden-bloom: #00b4a6;
+  --garden-cream: #f7fbfa;
+  --garden-mist: #e6f5f4;
+  --garden-ink: #1a2e2c;
+  --garden-charcoal: #2c2c2c;
+  --garden-purple: #6b3d9a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-garden-cream font-body antialiased;
+    color: var(--garden-ink);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    color: var(--garden-canopy);
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

@@ -1,0 +1,77 @@
+import type { Event } from "@/lib/types";
+
+/**
+ * Placeholder events — generic names only (no real branded exhibitions).
+ * Shape matches destination-site event cards: date, time, location.
+ */
+export const events: Event[] = [
+  {
+    id: "evt-1",
+    title: "Seasonal Bloom Showcase",
+    date: "2026-08-21",
+    endDate: "2026-09-27",
+    dateLabel: "Fri, 21 Aug - Sun, 27 Sep 2026",
+    time: "9.00am - 9.00pm",
+    location: "Flower Conservatory",
+    description: "A rotating floral display celebrating colour and form through late summer.",
+    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80",
+    category: "Festival",
+  },
+  {
+    id: "evt-2",
+    title: "Garden of Wonder Experience",
+    date: "2026-06-08",
+    endDate: "2027-03-14",
+    dateLabel: "Mon, 8 Jun 2026 - Sun, 14 Mar 2027",
+    time: "10.00am - 9.00pm",
+    location: "Floral Fantasy",
+    description: "Immersive themed chambers with light, scent, and living floral scenes.",
+    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80",
+    category: "Experience",
+  },
+  {
+    id: "evt-3",
+    title: "Cloud Canopy Nature Trail",
+    date: "2026-01-01",
+    dateLabel: "Ongoing",
+    time: "9.00am - 9.00pm",
+    location: "Cloud Canopy",
+    description: "Walk the misty highland path and discover rare plants year-round.",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    category: "Attraction",
+  },
+  {
+    id: "evt-4",
+    title: "The Plantsman's Fair",
+    date: "2026-08-22",
+    dateLabel: "Sat, 22 Aug 2026",
+    time: "10.00am - 5.00pm",
+    location: "Learning Pavilion",
+    description: "Meet growers, browse rare specimens, and join short plant-care talks.",
+    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+    category: "Fair",
+  },
+  {
+    id: "evt-5",
+    title: "Evening Light Walk",
+    date: "2026-08-01",
+    endDate: "2026-12-31",
+    dateLabel: "Every Sat, Sun & Mon",
+    time: "8.00pm - 8.30pm",
+    location: "Supertree Lawn",
+    description: "A short evening stroll under illuminated canopy structures.",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+    category: "Experience",
+  },
+  {
+    id: "evt-6",
+    title: "Garden Concert Series",
+    date: "2026-11-08",
+    dateLabel: "Daily",
+    time: "7.45pm & 8.45pm",
+    location: "Outdoor Theatre",
+    description: "Live acoustic sets against a backdrop of greenery and sunset.",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
+    category: "Performance",
+  },
+];
