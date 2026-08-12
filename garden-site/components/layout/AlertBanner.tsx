@@ -5,8 +5,7 @@ import Link from "next/link";
 import { siteAlerts } from "@/lib/data/nav-links";
 
 /**
- * Dismissible alert strip — mirrors destination-site visitor notices.
- * Content is placeholder only.
+ * Alert carousel strip — compact live-site announcement pattern.
  */
 export default function AlertBanner() {
   const [index, setIndex] = useState(0);
@@ -17,21 +16,25 @@ export default function AlertBanner() {
   const alert = siteAlerts[index];
 
   return (
-    <div className="border-b border-garden-leaf/20 bg-garden-mist text-garden-canopy">
-      <div className="mx-auto flex max-w-7xl items-start gap-3 px-4 py-3 xl:px-6 md:items-center">
-        <span className="mt-0.5 shrink-0 rounded bg-garden-leaf/15 px-2 py-0.5 font-body text-[10px] font-semibold uppercase tracking-wider text-garden-moss md:mt-0">
+    <div className="border-b border-black/10 bg-white text-garden-ink">
+      <div className="site-container flex items-start gap-3 py-3 md:items-center">
+        <span className="mt-0.5 shrink-0 bg-garden-canopy px-2 py-0.5 font-body text-[10px] font-bold uppercase tracking-wider text-white md:mt-0">
           Alert
         </span>
         <div className="min-w-0 flex-1">
-          <p className="font-body text-sm font-medium">{alert.title}</p>
-          <p className="mt-0.5 font-body text-xs leading-relaxed text-garden-earth/80 md:text-sm">
+          <p className="font-body text-sm font-bold text-garden-ink">{alert.title}</p>
+          <p className="mt-0.5 font-body text-xs leading-relaxed text-garden-earth md:text-sm">
             {alert.body}
             {alert.href && (
               <>
                 {" "}
-                <Link href={alert.href} className="underline underline-offset-2 hover:text-garden-leaf">
-                  View map
-                </Link>
+                <Link
+                  href={alert.href}
+                  className="font-bold text-garden-canopy underline underline-offset-2 hover:opacity-80"
+                >
+                  Click here
+                </Link>{" "}
+                to download the diversion map.
               </>
             )}
           </p>
@@ -39,6 +42,9 @@ export default function AlertBanner() {
         <div className="flex shrink-0 items-center gap-1">
           {siteAlerts.length > 1 && (
             <>
+              <span className="hidden font-body text-xs text-garden-earth sm:inline">
+                {index + 1}/{siteAlerts.length}
+              </span>
               <button
                 type="button"
                 aria-label="Previous alert"

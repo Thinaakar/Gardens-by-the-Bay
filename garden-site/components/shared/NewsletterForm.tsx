@@ -72,7 +72,7 @@ export default function NewsletterForm({
               ? "bg-white px-10 py-3.5 hover:bg-[#F0F0F0]"
               : "bg-garden-bloom px-5 py-2.5 text-white hover:bg-garden-moss"
           )}
-          style={isFooter ? { color: "#6B3D9A" } : undefined}
+          style={isFooter ? { color: "#530F66" } : undefined}
         >
           Subscribe
         </button>

@@ -6,34 +6,34 @@ import type { LinkItem, NavItem } from "@/lib/types";
  */
 export const mainNav: NavItem[] = [
   {
-    label: "Our Garden Story",
+    label: "Our Gardens Story",
     href: "/about-us",
     children: [
-      { label: "Our Garden Story", href: "/about-us" },
+      { label: "Our Gardens Story", href: "/about-us" },
       { label: "Our Story", href: "/about-us/our-story" },
       { label: "Our History", href: "/about-us/our-history" },
       { label: "Sustainability Efforts", href: "/about-us/sustainability" },
     ],
   },
   {
-    label: "Things to Do",
+    label: "Things to do",
     href: "/things-to-do",
     children: [
-      { label: "Flower Conservatory", href: "/things-to-do/attractions/flower-dome" },
-      { label: "Cloud Canopy", href: "/things-to-do/attractions/cloud-forest" },
+      { label: "Flower Dome", href: "/things-to-do/attractions/flower-dome" },
+      { label: "Cloud Forest", href: "/things-to-do/attractions/cloud-forest" },
       { label: "Floral Fantasy", href: "/things-to-do/attractions/floral-fantasy" },
-      { label: "Sky Walkway", href: "/things-to-do/attractions/skyway" },
-      { label: "Garden Observatory", href: "/things-to-do/attractions/observatory" },
+      { label: "OCBC Skyway", href: "/things-to-do/attractions/skyway" },
+      { label: "Supertree Observatory", href: "/things-to-do/attractions/observatory" },
       { label: "View all Attractions", href: "/things-to-do/attractions" },
-      { label: "Theatre", href: "/things-to-do/theatre" },
+      { label: "IMBA Theatre", href: "/things-to-do/theatre" },
       { label: "Garden Pod", href: "/things-to-do/garden-pod" },
-      { label: "Art & Sculptures", href: "/things-to-do/attractions/art-sculptures" },
+      { label: "Art Sculptures", href: "/things-to-do/attractions/art-sculptures" },
       { label: "Calendar of Events", href: "/things-to-do/calendar-of-events" },
       { label: "Dine & Shop", href: "/things-to-do/dine-and-shop" },
     ],
   },
   {
-    label: "Plan Your Visit",
+    label: "Plan your visit",
     href: "/plan-your-visit",
     children: [
       { label: "Opening Hours & Closures", href: "/plan-your-visit/opening-hours" },
@@ -47,7 +47,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
-    label: "Learn With Us",
+    label: "Learn with us",
     href: "/learn-with-us",
     children: [
       { label: "For Schools", href: "/learn-with-us/for-schools" },
@@ -125,13 +125,13 @@ export interface SiteAlert {
 export const siteAlerts: SiteAlert[] = [
   {
     id: "alert-1",
-    title: "Photography reminder",
-    body: "For a smoother visit, tripods and camera stands are not permitted in Floral Fantasy during peak hours.",
+    title: "Advisory for use of tripods at Disney Garden of Wonder at Floral Fantasy",
+    body: "For a better visiting experience and facilitate crowd movement, we seek your kind understanding that usage of tripods and camera stands will not be permitted in Floral Fantasy.",
   },
   {
     id: "alert-2",
-    title: "Pathway diversion",
-    body: "Temporary works along the waterfront may require a short pedestrian diversion. Cyclists should use the marked alternative route.",
+    title: "Bay South–Bay East Bridge Construction from 4 May 2026",
+    body: "To facilitate the construction of the bridge linking Bay South Garden and Bay East Garden, there will be no access for cyclists along the Waterfront Promenade from 4 May 2026. During the construction of the bridge, cyclists heading towards Marina Barrage are advised to take an alternative route around the perimeter of Bay South Garden. Pedestrians may still access the Waterfront Promenade, with a slight diversion to their route.",
     href: "/plan-your-visit/gardens-map",
   },
 ];

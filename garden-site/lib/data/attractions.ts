@@ -1,18 +1,18 @@
 import type { Attraction } from "@/lib/types";
+import { assets } from "@/lib/assets";
 
 /**
- * Placeholder attraction data.
- * Swap Unsplash URLs for local files under public/images/attractions/ later.
+ * Attraction data — homepage images from local assets.
  */
 export const attractions: Attraction[] = [
   {
     id: "flower-dome",
     slug: "flower-dome",
-    title: "Flower Conservatory",
-    shortDescription: "A climate-controlled glasshouse filled with seasonal floral displays.",
+    title: "Flower Dome",
+    shortDescription: "The only season here is Spring.",
     description:
-      "Step into a vast glass conservatory showcasing plants from Mediterranean and semi-arid regions. Rotating seasonal displays keep the experience fresh throughout the year. Ideal for photography, leisurely walks, and learning about plant adaptations.",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=80",
+      "Step into a vast glass conservatory showcasing plants from Mediterranean and semi-arid regions. Rotating seasonal displays keep the experience fresh throughout the year.",
+    image: assets.attraction.flowerDome,
     gallery: [
       {
         id: "fd-1",
@@ -47,11 +47,11 @@ export const attractions: Attraction[] = [
   {
     id: "cloud-forest",
     slug: "cloud-forest",
-    title: "Cloud Canopy",
-    shortDescription: "A cool highland mist forest with a towering indoor waterfall.",
+    title: "Cloud Forest",
+    shortDescription: "Wander past the misty veil.",
     description:
       "Experience a cool, misty highland environment featuring rare orchids, ferns, and a dramatic indoor waterfall. Walk the elevated trail for panoramic views of the canopy below.",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80",
+    image: assets.attraction.cloudForest,
     gallery: [
       {
         id: "cc-1",
@@ -84,7 +84,7 @@ export const attractions: Attraction[] = [
     shortDescription: "Immersive themed floral chambers with light and scent.",
     description:
       "Wander through themed floral chambers combining living plants, art installations, and sensory design. Each chamber tells a story through colour, fragrance, and form.",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+    image: assets.attraction.floralFantasy,
     gallery: [
       {
         id: "ff-1",
@@ -146,11 +146,11 @@ export const attractions: Attraction[] = [
   {
     id: "observatory",
     slug: "observatory",
-    title: "Garden Observatory",
-    shortDescription: "Climb to a high lookout for sunset and night views.",
+    title: "Supertree Observatory",
+    shortDescription: "Set your sights higher.",
     description:
       "Ascend to a high lookout platform for unforgettable sunset and evening views. Pair your visit with the nightly light experience across the garden grounds.",
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80",
+    image: assets.attraction.supertreeObservatory,
     gallery: [
       {
         id: "ob-1",

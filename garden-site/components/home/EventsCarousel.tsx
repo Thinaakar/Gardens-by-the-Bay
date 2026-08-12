@@ -31,27 +31,24 @@ function PinIcon() {
 }
 
 /**
- * Dark teal events band — side CTA + horizontal event cards
- * (layout patterned after destination gardens homepage).
+ * Events band — teal bg + left CTA panel matching live tile-carousel--left.
  */
 export default function EventsCarousel() {
   return (
-    <section className="overflow-x-hidden bg-[#0F4C48] py-12 text-white md:py-16">
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-4 xl:px-6 lg:flex-row lg:items-stretch lg:gap-6">
-        {/* Left CTA panel */}
-        <div className="flex w-full shrink-0 flex-col justify-center border border-white/80 px-6 py-10 lg:w-56 xl:w-64 xl:px-8">
-          <h2 className="font-body text-2xl font-semibold leading-snug text-white xl:text-[1.65rem]">
+    <section className="overflow-x-hidden bg-garden-canopy py-12 text-white md:py-14">
+      <div className="site-container flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-6">
+        <div className="flex w-full shrink-0 flex-col justify-center border border-white px-6 py-10 lg:w-56 xl:w-64 xl:px-8">
+          <h2 className="font-body text-xl font-bold leading-snug text-white md:text-2xl">
             An event for every season
           </h2>
           <Link
             href="/things-to-do/calendar-of-events"
-            className="mt-8 inline-flex w-fit bg-white px-5 py-3 font-body text-xs font-semibold uppercase tracking-wide text-[#0F4C48] transition hover:bg-white/90"
+            className="mt-8 inline-flex w-fit bg-white px-5 py-3 font-body text-xs font-bold uppercase tracking-wide text-garden-canopy transition hover:bg-white/90"
           >
             View all events
           </Link>
         </div>
 
-        {/* Card strip */}
         <CardStripCarousel ariaLabel="Upcoming events">
           {events.map((event) => (
             <Link
@@ -60,7 +57,7 @@ export default function EventsCarousel() {
               className="w-[240px] shrink-0 snap-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-[260px]"
             >
               <article>
-                <div className="relative aspect-[4/3] overflow-hidden bg-black/20">
+                <div className="relative aspect-square overflow-hidden bg-black/20">
                   <Image
                     src={event.image}
                     alt=""
@@ -70,7 +67,7 @@ export default function EventsCarousel() {
                   />
                 </div>
                 <div className="pt-4">
-                  <h3 className="font-body text-base font-semibold leading-snug text-white">
+                  <h3 className="font-body text-base font-bold leading-snug text-white">
                     {event.title}
                   </h3>
                   <ul className="mt-3 space-y-1.5 font-body text-xs text-white/90">

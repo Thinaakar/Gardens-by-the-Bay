@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --garden-canopy: #1f3a36;
-  --garden-leaf: #00a19a;
-  --garden-bloom: #00b4a6;
-  --garden-cream: #f7fbfa;
-  --garden-mist: #e6f5f4;
-  --garden-ink: #1a2e2c;
+  --garden-canopy: #0f4c48;
+  --garden-leaf: #0f4c48;
+  --garden-bloom: #00a19a;
+  --garden-cream: #ffffff;
+  --garden-mist: #f5f5f5;
+  --garden-ink: #333333;
   --garden-charcoal: #2c2c2c;
-  --garden-purple: #6b3d9a;
+  --garden-purple: #530f66;
 }
 
 @layer base {
@@ -19,17 +19,22 @@
   }
 
   body {
-    @apply bg-garden-cream font-body antialiased;
+    @apply bg-white font-body antialiased;
     color: var(--garden-ink);
     overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   h1,
   h2,
   h3,
-  h4 {
-    @apply font-display;
+  h4,
+  h5,
+  h6 {
+    @apply font-body font-bold;
     color: var(--garden-canopy);
+    line-height: 1.25;
   }
 
   a {
@@ -38,6 +43,37 @@
 }
 
 @layer utilities {
+  /* Full-width gutters — no max-width so content fills the viewport */
+  .site-container {
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .site-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .site-container {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .site-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;

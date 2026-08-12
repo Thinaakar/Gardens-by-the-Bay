@@ -116,7 +116,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-14 xl:px-6 md:pt-16">
+      <div className="relative z-10 site-container pb-8 pt-14 md:pt-16">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <nav aria-label="Footer">

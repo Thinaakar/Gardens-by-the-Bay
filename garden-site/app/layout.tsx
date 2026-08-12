@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import Script from "next/script";
+import { Lato } from "next/font/google";
 import Header from "@/components/layout/Header";
 import VisitStrip from "@/components/layout/VisitStrip";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
+/** Live site primary typeface: Lato, Arial, sans-serif */
+const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const body = Outfit({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "700", "900"],
   variable: "--font-body",
   display: "swap",
 });
@@ -26,17 +21,24 @@ export const metadata: Metadata = {
     template: "%s | Gardens by the Bay",
   },
   description:
-    "Conservatories, trails, events, and visitor planning at Gardens by the Bay.",
+    "Rated No. 8 World's Top Attraction by Tripadvisor 2024 Travellers' Choice, Gardens by the Bay is one of Asia's premier horticultural destinations. Discover a scenic paradise for nature and photography enthusiasts, as well as for the whole family!",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en" className={lato.variable}>
+      <body className="flex min-h-screen flex-col font-body">
         <Header />
         <main className="flex-1">{children}</main>
         <VisitStrip />
         <Footer />
+        <Script
+          src="https://cdn.dev-mongpt.com/mongpt-widget.iife.js"
+          strategy="afterInteractive"
+        />
+        <Script id="mongpt-init" strategy="afterInteractive">
+          {`MonGPT.init({ tenantId: 'df0b76c2-5800-4881-9193-02f83c6050d7', chatbotId: '51f6eeec-c17a-4ad5-965f-3f83cbf3c486' });`}
+        </Script>
       </body>
     </html>
   );

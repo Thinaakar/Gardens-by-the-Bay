@@ -38,7 +38,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
     >
       <button
         type="button"
-        className="flex items-center gap-1 px-3 py-3 font-body text-xs font-semibold uppercase tracking-[0.06em] text-neutral-800 transition hover:text-[#0F4C48]"
+        className="flex items-center gap-1 px-3 py-3 font-body text-xs font-bold uppercase tracking-[0.08em] text-neutral-800 transition hover:text-garden-canopy"
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((o) => !o)}
@@ -52,12 +52,12 @@ export default function NavDropdown({ item }: NavDropdownProps) {
       {open && children.length > 0 && (
         <div
           className={cn(
-            "absolute left-0 top-full z-50 border border-garden-mist/80 bg-white py-3 shadow-lg animate-fade-up",
+            "absolute left-0 top-full z-50 border border-black/10 bg-white py-3 shadow-lg animate-fade-up",
             useMega ? "w-[min(90vw,36rem)] p-4" : "min-w-[240px]"
           )}
           role="menu"
         >
-          <p className="mb-2 px-2 font-display text-base text-garden-canopy">{item.label}</p>
+          <p className="mb-2 px-2 font-body text-sm font-bold text-garden-canopy">{item.label}</p>
           <ul className={cn(useMega ? "grid grid-cols-2 gap-x-2 gap-y-0.5" : "block")}>
             {children.map((child) => (
               <li key={child.href} role="none">

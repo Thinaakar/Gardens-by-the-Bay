@@ -1,42 +1,39 @@
 import Image from "next/image";
-import Button from "@/components/shared/Button";
+import Link from "next/link";
+import { assets } from "@/lib/assets";
 
 /**
- * Sustainability callout — full-width band after attractions (destination-site pattern).
+ * Sustainability full-width banner — live copy + local banner image.
  */
 export default function SustainabilityBanner() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80"
+          src={assets.banners.sustainability}
           alt=""
           fill
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-garden-leaf/85" />
+        <div className="absolute inset-0 bg-[#0F4C48]/70" />
       </div>
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-20 xl:px-6 md:flex-row md:items-center md:justify-between md:py-24">
+      <div className="relative site-container flex flex-col items-start gap-6 py-14 md:flex-row md:items-center md:justify-between md:py-16">
         <div className="max-w-xl">
-          <p className="font-body text-xs font-semibold uppercase tracking-[0.18em] text-garden-sage">
-            Sustainability
-          </p>
-          <h2 className="mt-2 font-display text-3xl text-white md:text-4xl">
-            Secrets to a greener garden
+          <h2 className="font-body text-xl font-bold text-white md:text-2xl">
+            Secrets to Sustainability
           </h2>
-          <p className="mt-3 font-body text-garden-mist">
-            Uncover the ideas behind energy-efficient glasshouses, water recycling, and habitats
-            designed to thrive for generations.
+          <p className="mt-3 font-body text-base leading-relaxed text-white/95">
+            Uncover the innovative thought behind our iconic architecture that continues to keep
+            the Gardens sustainable!
           </p>
         </div>
-        <Button
+        <Link
           href="/about-us/sustainability"
-          variant="outline"
-          className="shrink-0 border-white text-white hover:bg-white/10"
+          className="shrink-0 border border-white px-6 py-3 font-body text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/10"
         >
           Find out more
-        </Button>
+        </Link>
       </div>
     </section>
   );

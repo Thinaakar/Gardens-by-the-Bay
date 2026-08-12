@@ -23,27 +23,24 @@ function PinIcon() {
 }
 
 /**
- * Dark teal promotions band — card strip + side CTA on the right
- * (layout patterned after destination gardens homepage).
+ * Promotions band — teal bg + right CTA panel matching live tile-carousel--right.
  */
 export default function PromotionsCarousel() {
   return (
-    <section className="overflow-x-hidden bg-[#0F4C48] py-12 text-white md:py-16">
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-4 xl:px-6 lg:flex-row-reverse lg:items-stretch lg:gap-6">
-        {/* Right CTA panel */}
-        <div className="flex w-full shrink-0 flex-col justify-center border border-white/80 px-6 py-10 lg:w-56 xl:w-64 xl:px-8">
-          <h2 className="font-body text-2xl font-semibold leading-snug text-white xl:text-[1.65rem]">
+    <section className="overflow-x-hidden bg-garden-canopy py-12 text-white md:py-14">
+      <div className="site-container flex flex-col gap-8 lg:flex-row-reverse lg:items-stretch lg:gap-6">
+        <div className="flex w-full shrink-0 flex-col justify-center border border-white px-6 py-10 lg:w-56 xl:w-64 xl:px-8">
+          <h2 className="font-body text-xl font-bold leading-snug text-white md:text-2xl">
             Fresh deals are calling
           </h2>
           <Link
             href="/promotions"
-            className="mt-8 inline-flex w-fit bg-white px-5 py-3 font-body text-xs font-semibold uppercase tracking-wide text-[#0F4C48] transition hover:bg-white/90"
+            className="mt-8 inline-flex w-fit bg-white px-5 py-3 font-body text-xs font-bold uppercase tracking-wide text-garden-canopy transition hover:bg-white/90"
           >
-            View all promotions
+            View all Promotions
           </Link>
         </div>
 
-        {/* Card strip */}
         <CardStripCarousel ariaLabel="Current promotions">
           {promotions.map((promo) => (
             <Link
@@ -52,7 +49,7 @@ export default function PromotionsCarousel() {
               className="w-[240px] shrink-0 snap-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-[260px]"
             >
               <article>
-                <div className="relative aspect-[4/3] overflow-hidden bg-black/20">
+                <div className="relative aspect-square overflow-hidden bg-black/20">
                   <Image
                     src={promo.image}
                     alt=""
@@ -60,15 +57,12 @@ export default function PromotionsCarousel() {
                     sizes="260px"
                     className="object-cover transition duration-500 hover:scale-105"
                   />
-                  <span
-                    className="absolute left-0 top-0 px-3 py-1.5 font-body text-[10px] font-semibold uppercase tracking-wide text-white"
-                    style={{ backgroundColor: "#6B3D9A" }}
-                  >
+                  <span className="absolute left-0 top-0 bg-garden-purple px-3 py-1.5 font-body text-[10px] font-bold uppercase tracking-wide text-white">
                     {promo.badge}
                   </span>
                 </div>
                 <div className="pt-4">
-                  <h3 className="font-body text-sm font-semibold leading-snug text-white sm:text-base">
+                  <h3 className="font-body text-sm font-bold leading-snug text-white sm:text-base">
                     {promo.title}
                   </h3>
                   <ul className="mt-3 space-y-1.5 font-body text-xs text-white/90">
